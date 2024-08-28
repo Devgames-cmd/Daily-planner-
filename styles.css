@@ -1,0 +1,156 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('background 2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    background: rgba(29, 67, 138, 0.849);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px; /* Limit the max width for larger screens */
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.planner {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.add-timing button {
+    background-color: #df400f;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    max-width: 300px; /* Limit button width */
+}
+
+.add-timing button:hover {
+    background-color: #45a049;
+}
+
+.finished-tasks {
+    text-align: left;
+    width: 100%; /* Make sure it takes the full width on mobile */
+    margin-top: 20px;
+}
+
+.finished-tasks h2 {
+    cursor: pointer;
+    margin: 0;
+    padding: 10px;
+    background-color: #db1478;
+    border-radius: 5px;
+}
+
+.finished-tasks h2:hover {
+    color: #1dd40c;
+}
+
+#timingsList {
+    margin-top: 20px;
+}
+
+.task {
+    display: flex;
+    flex-direction: column; /* Stack inputs vertically */
+    align-items: stretch; /* Stretch inputs to full width */
+    margin-bottom: 10px;
+}
+
+.task input[type="time"],
+.task input[type="text"] {
+    padding: 10px;
+    margin-bottom: 10px; /* Add space between inputs */
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+.task button {
+    background-color: #f44336;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%; /* Make button take full width */
+}
+
+.task button:hover {
+    background-color: #e53935;
+}
+
+.delete-button {
+    background-color: #f44336;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px; /* Add space above the delete button */
+}
+
+.delete-button:hover {
+    background-color: #e53935;
+}
+
+#finishedTasksList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#finishedTasksList li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+@media (min-width: 600px) {
+    /* Tablet and up */
+    .task {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .task input[type="time"],
+    .task input[type="text"] {
+        margin-bottom: 0;
+        margin-right: 10px;
+    }
+
+    .task button {
+        width: auto; /* Adjust button size */
+    }
+
+    #finishedTasksList li {
+        flex-direction: row;
+    }
+}

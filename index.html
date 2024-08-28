@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Planner</title>
+   
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Daily Planner  </h1>
+        
+
+        <div class="planner">
+            <div class="add-timing">
+                <button onclick="addTiming()">Add Timing</button>
+            </div>
+            <div class="finished-tasks">
+                <h2 onclick="toggleFinishedTasks()">Finished Tasks</h2>
+                <ul id="finishedTasksList" style="display: none;"></ul>
+            </div>
+        </div>
+
+        <div id="timingsList">
+            <!-- Dynamically added timing options will appear here -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
